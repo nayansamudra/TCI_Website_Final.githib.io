@@ -825,15 +825,6 @@ body {
   background-size: 4%, 12%;
 }
 
-.rocket_launch {
-  background: url(../img/Website_clipart_arts/art_design/4.png),
-    url(../img/Website_clipart_arts/art_design/7.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position-y: 35%, bottom !important;
-  background-position-x: 75%, right !important;
-  background-size: 10%;
-}
-
 #Take_Consistent_Income {
   background: url(../img/Website_clipart_arts/art_design/4.png),
     url(../img/Website_clipart_arts/art_design/5.png),
@@ -843,15 +834,6 @@ body {
   background-position-y: 5%, 25%, bottom, center !important;
   background-position-x: 5%, 87%, left, right !important;
   background-size: 5%, 10%, 25%, 5% !important;
-}
-
-#video_scroller {
-  background: url(../img/Website_clipart_arts/art_design/8.png),
-    url(../img/Website_clipart_arts/art_design/7.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position-y: 100%, 100% !important;
-  background-position-x: right, 70% !important;
-  background-size: 15%, 5%;
 }
 
 #Success_Stories {
