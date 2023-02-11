@@ -64,21 +64,6 @@ a {
     color: #28303d;
 }
 
-body {
-    background: url(../img/Website_clipart_arts/art_design/1.png), 
-                url(../img/Website_clipart_arts/art_design/2.png),
-                url(../img/Website_clipart_arts/art_design/3.png), 
-                url(../img/Website_clipart_arts/art_design/4.png),
-                url(../img/Website_clipart_arts/art_design/6.png),
-                url(../img/Website_clipart_arts/art_design/7.png), 
-                url(../img/Website_clipart_arts/art_design/8.png), 
-                url(../img/Website_clipart_arts/art_design/9.png), 
-                url(../img/Website_clipart_arts/art_design/10.png);
-    background-repeat: no-repeat;
-    background-position-y: 7%, 7%, 7%, 27%, 27%, 47%, 47%, 67%, 67% !important;
-    background-position-x: left, center, right, left, right, left, center, right, left!important; 
-    background-size: 15%, 12%;
-}
 
 @media (max-width:651px) {
     .entry-title {
