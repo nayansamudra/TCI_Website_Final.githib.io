@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   counter_1 = counter_2 = counter_3 = counter_course_accordion = 1
+  index = ''
   $.ajaxSetup({ async: false }); // to stop async
   console.log("ready!");
   $(".navbar-toggler").on("click", function () {
@@ -57,15 +58,32 @@ $(document).ready(function () {
   })
 
   $('.course-accordion').on('click', function () {
+    temp = $('.course-accordion').index(this)
     counter_course_accordion += 1
-    if (counter_course_accordion % 2 == 0) {
+    console.log(temp)
+    if (counter_course_accordion % 2 == 0 && counter_course_accordion <= 2) {
       $(this).addClass('active')
       $(this).next().css('max-height', 'fit-content')
     }
-    else if (counter_course_accordion % 2 != 0) {
-      $(this).removeClass('active')
-      $('.course-panel').css('max-height', '0px')
+    else if(counter_course_accordion > 2){
+      if (temp == index) {
+        if($(this).hasClass('active')){
+          $('.course-accordion').removeClass('active')
+          $('.course-panel').css('max-height', '0px')
+        }
+        else if(!$(this).hasClass('active')){
+          $(this).addClass('active')
+          $(this).next().css('max-height', 'fit-content')
+        }
+      }
+      else if (temp != index) {
+        $('.course-accordion').removeClass('active')
+        $('.course-panel').css('max-height', '0px')
+        $(this).addClass('active')
+        $(this).next().css('max-height', 'fit-content')
+      }
     }
+    index = temp
   })
 
   $(window).resize(function () {
