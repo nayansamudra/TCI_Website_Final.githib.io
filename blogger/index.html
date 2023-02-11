@@ -263,6 +263,64 @@
     <!-- Home Page Start  -->
     <span id="Home_Page">
 
+        <!-- TradingView Widget BEGIN -->
+        <div class="mx-0 px-0 mt-0 pt-0 container-fluid" style="position: relative;" id="TradingView_Widget">
+            <div class="mx-0 px-0 mt-0 pt-0 row" style="position: absolute;z-index: 1;width:100%;">
+                <div class="mx-0 px-0 tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [
+                                    {
+                                        "description": "SENSEX",
+                                        "proName": "INDEX:SENSEX"
+                                    },
+                                    {
+                                        "description": "SBIN",
+                                        "proName": "BSE:SBIN"
+                                    },
+                                    {
+                                        "description": "ADANI ENT",
+                                        "proName": "BSE:ADANIENT"
+                                    },
+                                    {
+                                        "description": "ICICI BANK",
+                                        "proName": "BSE:ICICIBANK"
+                                    },
+                                    {
+                                        "description": "TCS",
+                                        "proName": "BSE:TCS"
+                                    },
+                                    {
+                                        "description": "HDFC BANK",
+                                        "proName": "BSE:HDFCBANK"
+                                    },
+                                    {
+                                        "description": "RELIANCE",
+                                        "proName": "BSE:RELIANCE"
+                                    },
+                                    {
+                                        "description": "INFY",
+                                        "proName": "BSE:INFY"
+                                    }
+                                ],
+                                    "showSymbolLogo": true,
+                                        "colorTheme": "light",
+                                            "isTransparent": false,
+                                                "displayMode": "regular",
+                                                    "locale": "in"
+                            }
+                        </script>
+                </div>
+            </div>
+            <div class="mx-0 px-0 mt-0 pt-0 row" id="widget_mobile_view"
+                style="position: absolute;z-index: 1; width:100%; height:50px;">
+            </div>
+        </div>
+        
+        <!-- TradingView Widget END -->
+
         <div class="px-0 mt-5 pt-3 container" id="Rocket_container">
 
             <!-- For Laptop View  -->
@@ -286,7 +344,7 @@
                     <div class="laptop">
                         <img src="./img/laptop_1.png" alt="Laptop_Image">
                         <iframe class="Laptop_Video_iframe"
-                            src="https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            src=""
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -304,6 +362,16 @@
                             correct
                             way</span><br>
                     </div>
+                    <div class="px-0 mx-0 Mobile_Video">
+                        <div class="Mobile">
+                            <img src="./img/Laptop_Mobile_View.png" alt="Laptop_Image">
+                            <iframe class="Laptop_Video_iframe_mobile"
+                                src=""
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
 
                     <div class="pt-2 get_free_guidance_1">
                         <div class="py-3 px-5 get_free_guidance">
@@ -316,7 +384,7 @@
 
             <!-- TCI = Take Consistent Income -->
             <!-- <div class="my-5 extra_space prevent-select" style="color:white">TCI</div> -->
-            <div class="mt-5 row justify-content-center" id="Take_Consistent_Income">
+            <div class="mt-5 row justify-content-center wow animatable fadeInUp" id="Take_Consistent_Income">
                 <div class="px-4 col-md-7">
                     <div class="personal_learning_p" id="personal_learning_p">
                         <p>TCI = Take Consistent Income</p>
@@ -712,7 +780,48 @@
         <!-- case 3 -->
         <div class="pt-5 my-5 container">
             <div class="mt-5 row justify-content-center">
-                
+                <div class="col-md-6">
+                    <div class="lw-widget-in learnworlds-screen-wrapper learnworlds-element full in-view"
+                        data-element-id="frameScreen" data-node-type="screen" id="el_1672227538065_472">
+                        <div class="learnworlds-frame js-learnworlds-screen-element">
+                            <div class="lw-screen-content">
+                                <div class="js-learnworlds-overlay lw-dark-bg learnworlds-bg-default-overlay"
+                                    style="display:none;">
+                                </div>
+                                <div
+                                    class="learnworlds-screen-caption bottom lw-brand-bg-fadeout60 js-lw-flexible-wrapper js-screen-caption">
+                                    <div class="no-margin-bottom learnworlds-main-text learnworlds-main-text-small learnworlds-element"
+                                        data-node-type="text" data-magic="description" id="el_1672227538065_477">
+                                        Write
+                                        your
+                                        awesome
+                                        label here.</div>
+                                </div>
+                                <div class="learnworlds-AR-16-9 learnworlds-bg-default js-change-image-node js-screen-image-wrapper"
+                                    data-magic="image" style="display: none; background-image: none;"></div>
+                                <div class="learnworlds-AR-16-9 learnworlds-video-iframe-wrapper js-video-wrapper js-screen-video-wrapper hide-video-icon"
+                                    style="display: block;">
+                                    <span data-node-type="icon"
+                                        class="large lw-brand-text learnworlds-icon lw-video-iframe-icon far fa-play-circle"
+                                        data-magic="additional-icon" id="el_1672227538065_478"></span>
+                                    <iframe class="learnworlds-video-iframe  js-video-frame"
+                                        id="main_testimonial_iframe_link" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
+                                        allowfullscreen="" mozallowfullscreen=""
+                                        src=""></iframe>
+                                </div>
+                                <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
+                                    style="display:none"></div>
+                                <div class="js-thumbnail-wrapper video-thumbnail main_testimonial_video-thumbnail">
+                                    <span data-node-type="icon"
+                                        class="text-center large lw-brand-text learnworlds-icon lw-video-iframe-icon btn-play"
+                                        data-magic="additional-icon" id="el_1672717241094_403"><img src="./img/video-btn.png" alt="video_btn_img" loading="lazy" width="70%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="container-fluid justify-content-center" style="width: 80%;"
                         id="three_box_container_fluid">
@@ -757,6 +866,193 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- TCI Star trader 2 -->
+        <div class="mt-5 pt-2 container-fluid" id="video_testimonial" style="width:85%">
+            <div class="row mt-5 pt-5 pb-3" id="TCI_star_trader_first_row">
+                <div class="col-md-12 col-12 text-center">
+                    <small class="opt-txt-1">TCI STAR TRADER</small><br>
+                    <small class="opt-txt-3">More than 80% students are working professionals or pursing college</small>
+                </div>
+            </div>
+            <div class="mt-2 row">
+                <div class="col-md-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center">
+                            <div class="lw-widget-in learnworlds-screen-wrapper-1 learnworlds-element full in-view"
+                                data-element-id="frameScreen" data-node-type="screen" id="el_1672227538065_472">
+                                <div class="learnworlds-frame js-learnworlds-screen-element">
+                                    <div class="lw-screen-content">
+                                        <div class="js-learnworlds-overlay lw-dark-bg learnworlds-bg-default-overlay"
+                                            style="display:none;">
+                                        </div>
+                                        <div
+                                            class="learnworlds-screen-caption bottom lw-brand-bg-fadeout60 js-lw-flexible-wrapper js-screen-caption">
+                                            <div class="no-margin-bottom learnworlds-main-text learnworlds-main-text-small learnworlds-element"
+                                                data-node-type="text" data-magic="description"
+                                                id="el_1672227538065_477"> Write your awesome label here.</div>
+                                        </div>
+                                        <div class="learnworlds-AR-16-9 learnworlds-bg-default js-change-image-node js-screen-image-wrapper"
+                                            data-magic="image" style="display: none; background-image: none;"></div>
+                                        <div class="learnworlds-AR-16-9 learnworlds-video-iframe-wrapper learnworlds-video-iframe-wrapper-1 js-video-wrapper js-screen-video-wrapper hide-video-icon"
+                                            style="display: block;">
+                                            <span data-node-type="icon"
+                                                class="large lw-brand-text learnworlds-icon lw-video-iframe-icon far fa-play-circle"
+                                                data-magic="additional-icon" id="el_1672227538065_478"></span>
+                                            <iframe class="learnworlds-video-iframe  js-video-frame" id="iframe_link_1"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
+                                                allowfullscreen="" mozallowfullscreen=""
+                                                src="">
+                                            </iframe>
+                                        </div>
+                                        <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
+                                            style="display:none"></div>
+                                        <div class="js-thumbnail-wrapper video-thumbnail-1">
+                                            <span data-node-type="icon" id="btn-play-1"
+                                                class="text-center large lw-brand-text learnworlds-icon lw-video-iframe-icon btn-play_1"
+                                                data-magic="additional-icon" id="el_1672717241094_403"><img
+                                                    src="./img/video-btn.png" alt="video_btn_img" loading="lazy" width="50%"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <h1 class="py-2 text-center card-title-video-testimonial" style="font-weight: bolder;">Sagar
+                            Bhatia
+                            <!-- <small class="text-muted" style="font-weight: normal; font-size: x-large;">(Option
+                                Buyer)</small> -->
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center">
+                            <div class="lw-widget-in learnworlds-screen-wrapper-1 learnworlds-element full in-view"
+                                data-element-id="frameScreen" data-node-type="screen" id="el_1672227538065_472">
+                                <div class="learnworlds-frame js-learnworlds-screen-element">
+                                    <div class="lw-screen-content">
+                                        <div class="js-learnworlds-overlay lw-dark-bg learnworlds-bg-default-overlay"
+                                            style="display:none;">
+                                        </div>
+                                        <div
+                                            class="learnworlds-screen-caption bottom lw-brand-bg-fadeout60 js-lw-flexible-wrapper js-screen-caption">
+                                            <div class="no-margin-bottom learnworlds-main-text learnworlds-main-text-small learnworlds-element"
+                                                data-node-type="text" data-magic="description"
+                                                id="el_1672227538065_477">
+                                                Write
+                                                your
+                                                awesome
+                                                label here.</div>
+                                        </div>
+                                        <div class="learnworlds-AR-16-9 learnworlds-bg-default js-change-image-node js-screen-image-wrapper"
+                                            data-magic="image" style="display: none; background-image: none;"></div>
+                                        <div class="learnworlds-AR-16-9 learnworlds-video-iframe-wrapper learnworlds-video-iframe-wrapper-2 js-video-wrapper js-screen-video-wrapper hide-video-icon"
+                                            style="display: block;">
+                                            <span data-node-type="icon"
+                                                class="large lw-brand-text learnworlds-icon lw-video-iframe-icon far fa-play-circle"
+                                                data-magic="additional-icon" id="el_1672227538065_478"></span>
+                                            <iframe class="learnworlds-video-iframe  js-video-frame" id="iframe_link_2"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
+                                                allowfullscreen="" mozallowfullscreen=""
+                                                src=""></iframe>
+                                        </div>
+                                        <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
+                                            style="display:none"></div>
+                                        <div class="js-thumbnail-wrapper video-thumbnail-2">
+                                            <span data-node-type="icon"
+                                                class="text-center large lw-brand-text learnworlds-icon lw-video-iframe-icon btn-play_1"
+                                                data-magic="additional-icon" id="el_1672717241094_403"><img
+                                                    src="./img/video-btn.png" alt="video_btn_img" loading="lazy" width="50%"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1 class="py-2 text-center card-title-video-testimonial" style="font-weight: bolder;">
+                            Nikhil
+                            Verma
+                            <!-- <small class="text-muted" style="font-weight: normal; font-size: x-large;">(Master
+                                Trader)</small> -->
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center">
+                            <div class="lw-widget-in learnworlds-screen-wrapper-1 learnworlds-element full in-view"
+                                data-element-id="frameScreen" data-node-type="screen" id="el_1672227538065_472">
+                                <div class="learnworlds-frame js-learnworlds-screen-element">
+                                    <div class="lw-screen-content">
+                                        <div class="js-learnworlds-overlay lw-dark-bg learnworlds-bg-default-overlay"
+                                            style="display:none;">
+                                        </div>
+                                        <div
+                                            class="learnworlds-screen-caption bottom lw-brand-bg-fadeout60 js-lw-flexible-wrapper js-screen-caption">
+                                            <div class="no-margin-bottom learnworlds-main-text learnworlds-main-text-small learnworlds-element"
+                                                data-node-type="text" data-magic="description"
+                                                id="el_1672227538065_477">
+                                                Write
+                                                your
+                                                awesome
+                                                label here.</div>
+                                        </div>
+                                        <div class="learnworlds-AR-16-9 learnworlds-bg-default js-change-image-node js-screen-image-wrapper"
+                                            data-magic="image" style="display: none; background-image: none;"></div>
+                                        <div class="learnworlds-AR-16-9 learnworlds-video-iframe-wrapper learnworlds-video-iframe-wrapper-3 js-video-wrapper js-screen-video-wrapper hide-video-icon"
+                                            style="display: block;">
+                                            <span data-node-type="icon"
+                                                class="large lw-brand-text learnworlds-icon lw-video-iframe-icon far fa-play-circle"
+                                                data-magic="additional-icon" id="el_1672227538065_478"></span>
+                                            <iframe class="learnworlds-video-iframe  js-video-frame" id="iframe_link_3"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
+                                                allowfullscreen="" mozallowfullscreen=""
+                                                src=""></iframe>
+                                        </div>
+                                        <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
+                                            style="display:none"></div>
+                                        <div class="js-thumbnail-wrapper video-thumbnail-3">
+                                            <span data-node-type="icon"
+                                                class="text-center large lw-brand-text learnworlds-icon lw-video-iframe-icon btn-play_1"
+                                                data-magic="additional-icon" id="el_1672717241094_403"><img
+                                                    src="./img/video-btn.png" alt="video_btn_img" loading="lazy" width="50%"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1 class="py-2 text-center card-title-video-testimonial" style="font-weight: bolder;">
+                            Irshad
+                            Sidique
+                            <!-- <small class="text-muted" style="font-weight: normal; font-size: x-large;">(Money
+                                Maker)</small> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="get_free_guidance_1 d-flex justify-content-center wow animatable fadeInUp">
+            <a href="Success_stories.html">
+                <div class="py-3 px-3" id="more_success_stories"
+                    style="font-size: xx-large;font-weight: bolder;color: #324ed4;"><u>MORE SUCCESS
+                        STORIES</u> >></div>
+            </a>
+        </div>
+
+        
 
         <!-- Media Partner  -->
         <div class="my-5 pb-5 container-xxl" id="Media_Parter_Container">
