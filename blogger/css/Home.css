@@ -432,8 +432,20 @@ html {
 
 .inner2 {
   position: absolute;
-  left: 1px;
+  left: 16%;
   bottom: 0 !important;
+}
+
+@media (max-width:1400px) {
+  .inner2 {
+    left: 10.5%;
+  }
+}
+
+@media (max-width:1200px) {
+  .inner2 {
+    left: 3%;
+  }
 }
 
 .one_above_other,
@@ -799,9 +811,9 @@ a:hover {
 body {
   background: url(../img/Website_clipart_arts/art_design/3.png);
   background-repeat: no-repeat;
-  background-position-y: 15%;
-  background-position-x: 0;
-  background-size: 17%;
+  background-position-y: 9%;
+  background-position-x: 2%;
+  background-size: 10%;
 }
 
 #Home_Page .container:first-child {
@@ -1372,8 +1384,8 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Features of TCI */
 
 #Features_of_TCI {
-  padding-left: 7% !important;
-  /* padding-right: 7% !important; */
+  padding-left: 5% !important;
+  padding-right: 3% !important;
 }
 
 .more_info_background {
