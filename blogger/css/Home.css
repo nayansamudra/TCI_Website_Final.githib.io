@@ -436,13 +436,13 @@ html {
   bottom: 0 !important;
 }
 
-@media (max-width:1400px) {
+@media (max-width: 1400px) {
   .inner2 {
     left: 10.5%;
   }
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   .inner2 {
     left: 3%;
   }
@@ -1989,7 +1989,7 @@ div[class*="learnworlds-bg-default"] {
     padding-right: 0 !important;
   }
 
-  .three_box:nth-child(2){
+  .three_box:nth-child(2) {
     margin-left: 5px !important;
     margin-right: 5px !important;
   }
@@ -2036,7 +2036,7 @@ div[class*="learnworlds-bg-default"] {
     padding-bottom: 0.2rem !important;
   }
 
-  #three_box_container_fluid{
+  #three_box_container_fluid {
     padding-left: 5px !important;
     padding-right: 5px !important;
   }
@@ -2352,7 +2352,7 @@ div.course-panel p {
   .course-panel p {
     margin-bottom: 0 !important;
   }
-  .card-title-video-testimonial{
+  .card-title-video-testimonial {
     padding-bottom: 20px !important;
   }
 }
@@ -2491,7 +2491,8 @@ div.course-panel p {
   transition-delay: 0.5;
 }
 
-.container_2 .btn::before,.container_2 .btn::after {
+.container_2 .btn::before,
+.container_2 .btn::after {
   background: #000d47 !important;
 }
 
@@ -2521,7 +2522,8 @@ div.course-panel p {
   #delayedPopup_row_second_col div {
     margin-left: 0 !important;
   }
-  #Tredcode_Modal_heading, #delayedPopup_Modal_heading {
+  #Tredcode_Modal_heading,
+  #delayedPopup_Modal_heading {
     font-size: x-large !important;
   }
   .container_1 .btn {
@@ -2554,7 +2556,8 @@ div.course-panel p {
   .container_1 .btn {
     width: 160px !important;
   }
-  #Trecode_row_second_col,#delayedPopup_row_second_col {
+  #Trecode_row_second_col,
+  #delayedPopup_row_second_col {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -2565,7 +2568,8 @@ div.course-panel p {
 }
 
 @media (max-width: 1125px) {
-  #Tredcode_Modal_heading, #delayedPopup_Modal_heading {
+  #Tredcode_Modal_heading,
+  #delayedPopup_Modal_heading {
     font-size: x-large !important;
   }
 }
@@ -2733,53 +2737,227 @@ button[aria-expanded="false"] {
   display: none;
 }
 
-#delayedPopup .modal-content{
-  background:linear-gradient(90deg, #c7d0ff -19.27%, #5171ff 100%);
+#delayedPopup .modal-content {
+  background: linear-gradient(90deg, #c7d0ff -19.27%, #5171ff 100%);
 }
 
-#delayedPopup .modal-body{
-  background:linear-gradient(90deg, #c7d0ff -19.27%, #5171ff 100%);
+#delayedPopup .modal-body {
+  background: linear-gradient(90deg, #c7d0ff -19.27%, #5171ff 100%);
 }
 
-#delayedPopup .btn-close{
+#delayedPopup .btn-close {
   background-color: white !important;
 }
 
 #delayedPopup_row_first_col img.telegram_logo {
   display: none !important;
-} 
+}
 
-@media (max-width:992px) { 
-  #delayedPopup_row_first_col{
+@media (max-width: 992px) {
+  #delayedPopup_row_first_col {
     margin-left: 0 !important;
   }
-  #delayedPopup_row_second_col{
+  #delayedPopup_row_second_col {
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
-  #delayedPopup_row_second_col .img_description span{
+  #delayedPopup_row_second_col .img_description span {
     font-size: medium !important;
   }
-  #telegram_background div{
+  #telegram_background div {
     justify-content: center !important;
     display: flex !important;
   }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   #delayedPopup_row_first_col img {
     width: 50% !important;
-  } 
+  }
   #delayedPopup_row_first_col img.telegram_logo {
     width: 25% !important;
     display: block !important;
-  }  
+  }
   #delayedPopup_row_first_col {
     justify-content: space-evenly !important;
     align-items: center !important;
     display: flex !important;
   }
-  #hide_image img{
+  #hide_image img {
     display: none !important;
+  }
+}
+
+/* play button demo 1 */
+div.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: grid;
+  place-content: center;
+  animation: grow 1s infinite;
+}
+div.circle > span {
+  color: #324ed4;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 3px !important;
+}
+
+@keyframes grow {
+  from {
+    box-shadow: 0px 0px 5px 3px #324ed4;
+  }
+  to {
+    box-shadow: 0px 0px 25px 20px #324ed4;
+  }
+}
+
+/* play button demo 2  */
+
+.video {
+  width: 800px;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #324ed4;
+  color: white;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  border-radius: 100%;
+  position: relative;
+}
+.play-btn:before {
+  content: "";
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom1 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+.play-btn:after {
+  content: "";
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom2 1.5s linear infinite;
+  opacity: 0;
+  animation-delay: 0.4s;
+  z-index: 1;
+}
+@keyframes bloom1 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bloom2 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* play button demo 3  */
+
+.video {
+  width: 800px;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-btn_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #324ed4;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  border-radius: 100%;
+  position: relative;
+}
+.play-btn_1:before {
+  content: "";
+  position: absolute;
+  border: 5px solid #324ed4;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom1 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+.play-btn_1:after {
+  content: "";
+  position: absolute;
+  border: 5px solid #324ed4;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom2 1.5s linear infinite;
+  opacity: 0;
+  animation-delay: 0.4s;
+  z-index: 1;
+}
+@keyframes bloom1 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bloom2 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
   }
 }
