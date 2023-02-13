@@ -1854,16 +1854,16 @@ div[class*="learnworlds-bg-default"] {
 }
 
 .main_testimonial_video-thumbnail {
-  background-image: url(../img/main_testimonial_thumbnail.jpeg) !important;
+  background-image: url(../img/main_testimonial_thumbnail.webp) !important;
 }
 .video-thumbnail-1 {
-  background-image: url(../img/TCI_star_trader/options_master.png) !important;
+  background-image: url(../img/TCI_star_trader/options_master.webp) !important;
 }
 .video-thumbnail-2 {
-  background-image: url(../img/TCI_star_trader/swing_trader.jpeg) !important;
+  background-image: url(../img/TCI_star_trader/swing_trader.webp) !important;
 }
 .video-thumbnail-3 {
-  background-image: url(../img/TCI_star_trader/money_maker.png) !important;
+  background-image: url(../img/TCI_star_trader/money_maker.webp) !important;
 }
 
 /* Below Video 3 boxes  */
