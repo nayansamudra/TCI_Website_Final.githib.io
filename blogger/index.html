@@ -1597,7 +1597,8 @@
         <div class="modal-dialog modal-dialog-centered modal-notify modal-info modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center" style="border-bottom: 1px solid white;">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close Button_Close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body mb-5">
                     <div class="container d-flex justify-content-center align-items-center" id="Send_OTP_Modal">
@@ -1815,7 +1816,8 @@
         <div class="modal-dialog modal-dialog-centered modal-notify modal-info modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center" style="border-bottom: 1px solid white;">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close Button_Close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container-xxl" id="About_Tredcode">
@@ -2088,7 +2090,19 @@
                 else if (mode_1 == "play") {
                     return
                 }
-            }, 10000);
+            }, 15000);
+
+            myTimeout = setTimeout(() => {
+                if (telegram_counter < 1) {
+                    $('html').css('overflow', 'hidden');
+                    $('#delayedPopup').addClass('show');
+                    //Fade in delay for the background overlay (control timing here)
+                    $("#bkgOverlay").show();
+                    //Fade in delay for the popup (control timing here)
+                    $("#delayedPopup").show();
+                }
+                telegram_counter += 1
+            }, 5000);
         }
 
         function onpause_2() {
@@ -2102,7 +2116,19 @@
                 else if (mode_2 == "play") {
                     return
                 }
-            }, 10000);
+            }, 15000);
+
+            myTimeout = setTimeout(() => {
+                if (telegram_counter < 1) {
+                    $('html').css('overflow', 'hidden');
+                    $('#delayedPopup').addClass('show');
+                    //Fade in delay for the background overlay (control timing here)
+                    $("#bkgOverlay").show();
+                    //Fade in delay for the popup (control timing here)
+                    $("#delayedPopup").show();
+                }
+                telegram_counter += 1
+            }, 5000);
         }
 
         function onpause_3() {
@@ -2116,7 +2142,19 @@
                 else if (mode_3 == "play") {
                     return
                 }
-            }, 10000);
+            }, 15000);
+
+            myTimeout = setTimeout(() => {
+                if (telegram_counter < 1) {
+                    $('html').css('overflow', 'hidden');
+                    $('#delayedPopup').addClass('show');
+                    //Fade in delay for the background overlay (control timing here)
+                    $("#bkgOverlay").show();
+                    //Fade in delay for the popup (control timing here)
+                    $("#delayedPopup").show();
+                }
+                telegram_counter += 1
+            }, 5000);
         }
 
         function onpause_main_testimonial() {
@@ -2130,7 +2168,19 @@
                 else if (Main_testimonial_mode == "play") {
                     return
                 }
-            }, 10000);
+            }, 15000);
+
+            myTimeout = setTimeout(() => {
+                if (telegram_counter < 1) {
+                    $('html').css('overflow', 'hidden');
+                    $('#delayedPopup').addClass('show');
+                    //Fade in delay for the background overlay (control timing here)
+                    $("#bkgOverlay").show();
+                    //Fade in delay for the popup (control timing here)
+                    $("#delayedPopup").show();
+                }
+                telegram_counter += 1
+            }, 5000);
         }
 
         function HideDialog() {
@@ -2144,15 +2194,100 @@
             var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
             laptop_vdo_player.on('play', function () {
                 clearTimeout(myTimeout)
+                var iframe = $('#iframe_link_1')[0];
+                var player = new Vimeo.Player(iframe);
+                player.pause()
+
+                var iframe_1 = $('#iframe_link_2')[0];
+                var player_1 = new Vimeo.Player(iframe_1);
+                player_1.pause()
+
+                var iframe_2 = $('#iframe_link_3')[0];
+                var player_2 = new Vimeo.Player(iframe_2);
+                player_2.pause()
+
+                var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                player_main_testimonial.pause()
             });
+            laptop_vdo_player.on('ended', function () {
+                myTimeout = setTimeout(() => {
+                    if (telegram_counter < 1) {
+                        $('html').css('overflow', 'hidden');
+                        $('#delayedPopup').addClass('show');
+                        //Fade in delay for the background overlay (control timing here)
+                        $("#bkgOverlay").show();
+                        //Fade in delay for the popup (control timing here)
+                        $("#delayedPopup").show();
+                    }
+                    telegram_counter += 1
+                }, 5000);
+            });
+            laptop_vdo_player.on('pause', function () {
+                myTimeout = setTimeout(() => {
+                    if (telegram_counter < 1) {
+                        $('html').css('overflow', 'hidden');
+                        $('#delayedPopup').addClass('show');
+                        //Fade in delay for the background overlay (control timing here)
+                        $("#bkgOverlay").show();
+                        //Fade in delay for the popup (control timing here)
+                        $("#delayedPopup").show();
+                    }
+                    telegram_counter += 1
+                }, 5000);
+            });
+
             var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
             var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
             laptop_vdo_player_mobile.on('play', function () {
                 clearTimeout(myTimeout)
+                var iframe = $('#iframe_link_1')[0];
+                var player = new Vimeo.Player(iframe);
+                player.pause()
+
+                var iframe_1 = $('#iframe_link_2')[0];
+                var player_1 = new Vimeo.Player(iframe_1);
+                player_1.pause()
+
+                var iframe_2 = $('#iframe_link_3')[0];
+                var player_2 = new Vimeo.Player(iframe_2);
+                player_2.pause()
+
+                var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                player_main_testimonial.pause()
+            });
+            laptop_vdo_player_mobile.on('ended', function () {
+                myTimeout = setTimeout(() => {
+                    if (telegram_counter < 1) {
+                        $('html').css('overflow', 'hidden');
+                        $('#delayedPopup').addClass('show');
+                        //Fade in delay for the background overlay (control timing here)
+                        $("#bkgOverlay").show();
+                        //Fade in delay for the popup (control timing here)
+                        $("#delayedPopup").show();
+                    }
+                    telegram_counter += 1
+                }, 5000);
+            });
+            laptop_vdo_player_mobile.on('pause', function () {
+                myTimeout = setTimeout(() => {
+                    if (telegram_counter < 1) {
+                        $('html').css('overflow', 'hidden');
+                        $('#delayedPopup').addClass('show');
+                        //Fade in delay for the background overlay (control timing here)
+                        $("#bkgOverlay").show();
+                        //Fade in delay for the popup (control timing here)
+                        $("#delayedPopup").show();
+                    }
+                    telegram_counter += 1
+                }, 5000);
             });
 
             mode_1 = mode_2 = mode_3 = Main_testimonial_mode = ""
             player_one = player_two = player_three = Main_testimonial_player = ""
+
+            telegram_counter = 0
 
             //Hide dialouge and background when the user clicks the close button
             $("#btnClose").click(function (e) {
@@ -2161,13 +2296,16 @@
                 e.preventDefault();
             });
 
-            const myTimeout = setTimeout(() => {
-                $('html').css('overflow', 'hidden');
-                $('#delayedPopup').addClass('show');
-                //Fade in delay for the background overlay (control timing here)
-                $("#bkgOverlay").show();
-                //Fade in delay for the popup (control timing here)
-                $("#delayedPopup").show();
+            myTimeout = setTimeout(() => {
+                if (telegram_counter < 1) {
+                    $('html').css('overflow', 'hidden');
+                    $('#delayedPopup').addClass('show');
+                    //Fade in delay for the background overlay (control timing here)
+                    $("#bkgOverlay").show();
+                    //Fade in delay for the popup (control timing here)
+                    $("#delayedPopup").show();
+                }
+                telegram_counter += 1
             }, 5000);
 
             $('#delayedPopup_modal_body').click(() => {
@@ -2180,6 +2318,20 @@
 
             $('#Tredcode_Feature').click(() => {
                 clearTimeout(myTimeout);
+            })
+
+            $('.Button_Close').click(() => {
+                myTimeout = setTimeout(() => {
+                    if (telegram_counter < 1) {
+                        $('html').css('overflow', 'hidden');
+                        $('#delayedPopup').addClass('show');
+                        //Fade in delay for the background overlay (control timing here)
+                        $("#bkgOverlay").show();
+                        //Fade in delay for the popup (control timing here)
+                        $("#delayedPopup").show();
+                    }
+                    telegram_counter += 1
+                }, 5000);
             })
 
             $('.main_testimonial_video-thumbnail').click(() => {
@@ -2195,12 +2347,24 @@
                 Main_testimonial_player.play()
                 Main_testimonial_player.on('ended', function () {
                     $('.main_testimonial_video-thumbnail').show();
+                    myTimeout = setTimeout(() => {
+                        if (telegram_counter < 1) {
+                            $('html').css('overflow', 'hidden');
+                            $('#delayedPopup').addClass('show');
+                            //Fade in delay for the background overlay (control timing here)
+                            $("#bkgOverlay").show();
+                            //Fade in delay for the popup (control timing here)
+                            $("#delayedPopup").show();
+                        }
+                        telegram_counter += 1
+                    }, 5000);
                 });
                 Main_testimonial_player.on('pause', function () {
                     Main_testimonial_mode = "pause"
                     onpause_main_testimonial()
                 });
                 Main_testimonial_player.on('play', function () {
+                    clearTimeout(myTimeout)
                     Main_testimonial_mode = "play"
                     $('.main_testimonial_video-thumbnail').hide();
                 });
@@ -2216,6 +2380,14 @@
                 var iframe_2 = $('#iframe_link_3')[0];
                 var player_2 = new Vimeo.Player(iframe_2);
                 player_2.pause()
+
+                var laptop_vdo = $('.Laptop_Video_iframe')
+                var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                laptop_vdo_player.pause()
+
+                var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                laptop_vdo_player_mobile.pause()
             })
 
             // http://jsfiddle.net/o8cr51p4/1/
@@ -2231,6 +2403,17 @@
                 player.play()
                 player.on('ended', function () {
                     $('.video-thumbnail-1').show();
+                    myTimeout = setTimeout(() => {
+                        if (telegram_counter < 1) {
+                            $('html').css('overflow', 'hidden');
+                            $('#delayedPopup').addClass('show');
+                            //Fade in delay for the background overlay (control timing here)
+                            $("#bkgOverlay").show();
+                            //Fade in delay for the popup (control timing here)
+                            $("#delayedPopup").show();
+                        }
+                        telegram_counter += 1
+                    }, 5000);
                 });
                 player.on('pause', function () {
                     mode_1 = "pause"
@@ -2239,6 +2422,7 @@
                 player.on('play', function () {
                     mode_1 = "play"
                     $('.video-thumbnail-1').hide();
+                    clearTimeout(myTimeout)
                 });
 
                 var iframe_1 = $('#iframe_link_2')[0];
@@ -2252,6 +2436,14 @@
                 var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
                 var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
                 player_main_testimonial.pause()
+
+                var laptop_vdo = $('.Laptop_Video_iframe')
+                var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                laptop_vdo_player.pause()
+
+                var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                laptop_vdo_player_mobile.pause()
             })
 
             $('.video-thumbnail-2').click(() => {
@@ -2270,6 +2462,17 @@
                 player_1.play()
                 player_1.on('ended', function () {
                     $('.video-thumbnail-2').show();
+                    myTimeout = setTimeout(() => {
+                        if (telegram_counter < 1) {
+                            $('html').css('overflow', 'hidden');
+                            $('#delayedPopup').addClass('show');
+                            //Fade in delay for the background overlay (control timing here)
+                            $("#bkgOverlay").show();
+                            //Fade in delay for the popup (control timing here)
+                            $("#delayedPopup").show();
+                        }
+                        telegram_counter += 1
+                    }, 5000);
                 });
                 player_1.on('pause', function () {
                     mode_2 = "pause"
@@ -2278,6 +2481,7 @@
                 player_1.on('play', function () {
                     mode_2 = "play"
                     $('.video-thumbnail-2').hide();
+                    clearTimeout(myTimeout)
                 });
 
                 var iframe_2 = $('#iframe_link_3')[0];
@@ -2287,6 +2491,14 @@
                 var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
                 var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
                 player_main_testimonial.pause()
+
+                var laptop_vdo = $('.Laptop_Video_iframe')
+                var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                laptop_vdo_player.pause()
+
+                var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                laptop_vdo_player_mobile.pause()
             })
 
             $('.video-thumbnail-3').click(() => {
@@ -2309,6 +2521,17 @@
                 player_2.play()
                 player_2.on('ended', function () {
                     $('.video-thumbnail-3').show();
+                    myTimeout = setTimeout(() => {
+                        if (telegram_counter < 1) {
+                            $('html').css('overflow', 'hidden');
+                            $('#delayedPopup').addClass('show');
+                            //Fade in delay for the background overlay (control timing here)
+                            $("#bkgOverlay").show();
+                            //Fade in delay for the popup (control timing here)
+                            $("#delayedPopup").show();
+                        }
+                        telegram_counter += 1
+                    }, 5000);
                 });
                 player_2.on('pause', function () {
                     mode_3 = "pause"
@@ -2317,11 +2540,20 @@
                 player_2.on('play', function () {
                     mode_3 = "play"
                     $('.video-thumbnail-3').hide();
+                    clearTimeout(myTimeout)
                 });
 
                 var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
                 var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
                 player_main_testimonial.pause()
+
+                var laptop_vdo = $('.Laptop_Video_iframe')
+                var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                laptop_vdo_player.pause()
+
+                var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                laptop_vdo_player_mobile.pause()
             })
 
             if ($(window).width() < 772) {
