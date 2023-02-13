@@ -1048,8 +1048,9 @@
         <div class="get_free_guidance_1 d-flex justify-content-center wow animatable fadeInUp">
             <a href="Success_stories.html">
                 <div class="py-3 px-3" id="more_success_stories"
-                    style="font-size: xx-large;font-weight: bolder;color: #324ed4;"><u>MORE SUCCESS
-                        STORIES</u> >></div>
+                    style="font-size: xx-large;font-weight: bolder;color: #324ed4;">
+                    <u>MORE SUCCESS STORIES</u> >>
+                </div>
             </a>
         </div>
 
@@ -2314,10 +2315,56 @@
 
             $('.btn-know-more').click(() => {
                 clearTimeout(myTimeout);
+                var iframe = $('#iframe_link_1')[0];
+                var player = new Vimeo.Player(iframe);
+                player.pause()
+
+                var iframe_1 = $('#iframe_link_2')[0];
+                var player_1 = new Vimeo.Player(iframe_1);
+                player_1.pause()
+
+                var iframe_2 = $('#iframe_link_3')[0];
+                var player_2 = new Vimeo.Player(iframe_2);
+                player_2.pause()
+
+                var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                player_main_testimonial.pause()
+
+                var laptop_vdo = $('.Laptop_Video_iframe')
+                var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                laptop_vdo_player.pause()
+
+                var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                laptop_vdo_player_mobile.pause()
             })
 
             $('#Tredcode_Feature').click(() => {
                 clearTimeout(myTimeout);
+                var iframe = $('#iframe_link_1')[0];
+                var player = new Vimeo.Player(iframe);
+                player.pause()
+
+                var iframe_1 = $('#iframe_link_2')[0];
+                var player_1 = new Vimeo.Player(iframe_1);
+                player_1.pause()
+
+                var iframe_2 = $('#iframe_link_3')[0];
+                var player_2 = new Vimeo.Player(iframe_2);
+                player_2.pause()
+
+                var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                player_main_testimonial.pause()
+
+                var laptop_vdo = $('.Laptop_Video_iframe')
+                var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                laptop_vdo_player.pause()
+
+                var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                laptop_vdo_player_mobile.pause()
             })
 
             $('.Button_Close').click(() => {
