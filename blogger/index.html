@@ -908,7 +908,7 @@
                                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                                 style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
                                                 allowfullscreen="" mozallowfullscreen=""
-                                                src="https://player.vimeo.com/video/680301651?h=9399ccb92b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+                                                src="">
                                             </iframe>
                                         </div>
                                         <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
@@ -966,7 +966,7 @@
                                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                                 style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
                                                 allowfullscreen="" mozallowfullscreen=""
-                                                src="https://player.vimeo.com/video/680302796?h=00c0201526&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"></iframe>
+                                                src=""></iframe>
                                         </div>
                                         <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
                                             style="display:none"></div>
@@ -1021,7 +1021,7 @@
                                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                                 style="height:100%; width:100%;" playsinline="" webkitallowfullscreen=""
                                                 allowfullscreen="" mozallowfullscreen=""
-                                                src="https://player.vimeo.com/video/680300445?h=517918a4f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"></iframe>
+                                                src=""></iframe>
                                         </div>
                                         <div class="js-embed-wrapper learnworlds-AR-16-9 lw-embed-wrapper learnworlds-element"
                                             style="display:none"></div>
@@ -2051,7 +2051,7 @@
         </script>
 
     <script src="js/intlTelInput.min.js"></script>
-<!--     <script src="js/vimeo_player.js" async></script> -->
+    <!-- <script src="js/vimeo_player.js" defer></script> -->
     <script src="js/odometer.js" defer></script>
 
     <script>
@@ -2195,21 +2195,21 @@
             var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
             laptop_vdo_player.on('play', function () {
                 clearTimeout(myTimeout)
-                var iframe = $('#iframe_link_1')[0];
-                var player = new Vimeo.Player(iframe);
-                player.pause()
+                // var iframe = $('#iframe_link_1')[0];
+                // var player = new Vimeo.Player(iframe);
+                // player.pause()
 
-                var iframe_1 = $('#iframe_link_2')[0];
-                var player_1 = new Vimeo.Player(iframe_1);
-                player_1.pause()
+                // var iframe_1 = $('#iframe_link_2')[0];
+                // var player_1 = new Vimeo.Player(iframe_1);
+                // player_1.pause()
 
-                var iframe_2 = $('#iframe_link_3')[0];
-                var player_2 = new Vimeo.Player(iframe_2);
-                player_2.pause()
+                // var iframe_2 = $('#iframe_link_3')[0];
+                // var player_2 = new Vimeo.Player(iframe_2);
+                // player_2.pause()
 
-                var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
-                var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
-                player_main_testimonial.pause()
+                // var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                // var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                // player_main_testimonial.pause()
             });
             laptop_vdo_player.on('ended', function () {
                 myTimeout = setTimeout(() => {
@@ -2242,21 +2242,21 @@
             var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
             laptop_vdo_player_mobile.on('play', function () {
                 clearTimeout(myTimeout)
-                var iframe = $('#iframe_link_1')[0];
-                var player = new Vimeo.Player(iframe);
-                player.pause()
+                // var iframe = $('#iframe_link_1')[0];
+                // var player = new Vimeo.Player(iframe);
+                // player.pause()
 
-                var iframe_1 = $('#iframe_link_2')[0];
-                var player_1 = new Vimeo.Player(iframe_1);
-                player_1.pause()
+                // var iframe_1 = $('#iframe_link_2')[0];
+                // var player_1 = new Vimeo.Player(iframe_1);
+                // player_1.pause()
 
-                var iframe_2 = $('#iframe_link_3')[0];
-                var player_2 = new Vimeo.Player(iframe_2);
-                player_2.pause()
+                // var iframe_2 = $('#iframe_link_3')[0];
+                // var player_2 = new Vimeo.Player(iframe_2);
+                // player_2.pause()
 
-                var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
-                var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
-                player_main_testimonial.pause()
+                // var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                // var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                // player_main_testimonial.pause()
             });
             laptop_vdo_player_mobile.on('ended', function () {
                 myTimeout = setTimeout(() => {
