@@ -470,7 +470,7 @@
         </div>
 
         <!-- Course Curriculum (NEW BOOTSTRAP) -->
-        <div class="mt-5 container" style="padding-left: 24px !important;">
+        <div class="mt-5 container pagespeed_hide" style="padding-left: 24px !important;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="mb-5 mt-5 pt-5 personal_learning_p" id="Course_Curriculum">
@@ -659,7 +659,7 @@
         </div>
 
         <!-- Features of TCI -->
-        <div class="container-fluid mt-5 pt-5 pb-5" id="Features_of_TCI">
+        <div class="container-fluid mt-5 pt-5 pb-5 pagespeed_hide" id="Features_of_TCI">
             <div class="row my-5" id="Features_of_TCI_first_row">
                 <div class="col-md-12 col-12 nopad-mob text-center">
                     <small class="opt-txt-1">Your Trade Buddy</small>
@@ -768,7 +768,7 @@
             </div>
         </div>
 
-        <div class="container-fluid mt-5 pt-5 pb-5 d-flex justify-content-center" id="Features_of_Tredcode"
+        <div class="container-fluid mt-5 pt-5 pb-5 d-flex justify-content-center pagespeed_hide" id="Features_of_Tredcode"
             style="background-color: #f3f3ff;">
             <div class="row" id="Features_of_TCI_Trecode_row" style="width:75%">
                 <div class="col-lg-6 d-flex justify-content-center">
@@ -797,7 +797,7 @@
 
         <!-- Video Testimonail -->
         <!-- case 3 -->
-        <div class="pt-5 my-5 container">
+        <div class="pt-5 my-5 container pagespeed_hide">
             <div class="mt-5 row justify-content-center">
                 <div class="col-md-6">
                     <div class="lw-widget-in learnworlds-screen-wrapper learnworlds-element full in-view"
@@ -889,7 +889,7 @@
 
 
         <!-- TCI Star trader 2 -->
-        <div class="mt-5 pt-2 container-fluid" id="video_testimonial" style="width:85%">
+        <div class="mt-5 pt-2 container-fluid pagespeed_hide" id="video_testimonial" style="width:85%">
             <div class="row mt-5 pt-5 pb-3" id="TCI_star_trader_first_row">
                 <div class="col-md-12 col-12 text-center">
                     <small class="opt-txt-1">TCI STAR TRADER</small><br>
@@ -1059,7 +1059,7 @@
             </div>
         </div>
 
-        <div class="get_free_guidance_1 d-flex justify-content-center wow animatable fadeInUp">
+        <div class="get_free_guidance_1 d-flex justify-content-center wow animatable fadeInUp pagespeed_hide">
             <a href="Success_stories.html">
                 <div class="py-3 px-3" id="more_success_stories"
                     style="font-size: xx-large;font-weight: bolder;color: #324ed4;">
@@ -1069,7 +1069,7 @@
         </div>
 
         <!-- Odometer Counter -->
-        <div class="mt-5 pt-5 container-xxl counter-section wow animatable fadeInUp" id="odometer_counter">
+        <div class="mt-5 pt-5 container-xxl counter-section wow animatable fadeInUp pagespeed_hide" id="odometer_counter">
             <div class="mt-5 pt-5 container-fluid">
                 <div class="row text-center">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
@@ -1103,7 +1103,7 @@
         <!-- Counter end  -->
 
         <!-- Media Partner  -->
-        <div class="my-5 pb-5 container-xxl" id="Media_Parter_Container">
+        <div class="my-5 pb-5 container-xxl pagespeed_hide" id="Media_Parter_Container">
             <div class="mb-5 container">
                 <div class="row justify-content-center text-center wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -1159,7 +1159,7 @@
         </div>
 
         <!-- Faculty Team Start -->
-        <div class="mt-5 pt-5 personal_learning_p animatable fadeInUp" style="height:fit-content">
+        <div class="mt-5 pt-5 personal_learning_p animatable fadeInUp pagespeed_hide" style="height:fit-content">
             <p style="font-size: xx-large;" id="Our_Faculty_Team">Our Faculty Team</p>
         </div>
         <!-- Laptop View  -->
@@ -1320,7 +1320,7 @@
         </div>
         <!-- Faculty Team End  -->
 
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center pagespeed_hide">
             <div class="get_free_guidance_1">
                 <div class="py-3 px-5 get_free_guidance">
                     <a href="javascript:void(0)" id="1_btn" class="btn-know-more" data-bs-toggle="modal" data-src=""
@@ -2207,6 +2207,10 @@
 
         $(window).on('load', function () {
             setTimeout(() => {
+                $('.pagespeed_hide').show()
+            }, 1500);
+
+            setTimeout(() => {
                 if (counter_for_vimeo_Laptop_video == 0) {
                     $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
                     counter_for_vimeo_Laptop_video = 1
@@ -2224,6 +2228,8 @@
         })
 
         $(document).ready(function () {
+
+            $('.pagespeed_hide').hide()
 
             counter_for_vimeo_Laptop_video = counter_for_vimeo_Laptop_video_MOBILE = 0
             vimeo_link_set = false
