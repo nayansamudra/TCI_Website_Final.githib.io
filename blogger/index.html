@@ -202,7 +202,7 @@
 <body style="font-family: 'Outfit', sans-serif;overflow-x:hidden !important">
     <!-- Header Start-->
     <!-- Mobile Header -->
-    <nav class="navbar navbar-expand-lg bg-light" id="Header_for_Mobile">
+    <nav class="navbar navbar-expand-lg bg-light pagespeed_hide" id="Header_for_Mobile">
         <div class="container-fluid justify-content-evenly">
             <div class="site-logo px-2"><span class="custom-logo-link"><img alt="logo" id="tci_logo" width="72"
                         height="77" src="img/tci_logo.webp" class="custom-logo" /></span></div>
@@ -260,7 +260,7 @@
     </nav>
     <!-- Mobile Header End -->
     <!-- Laptop Header -->
-    <nav class="navbar navbar-expand-lg" id="Header_for_Laptop">
+    <nav class="navbar navbar-expand-lg pagespeed_hide" id="Header_for_Laptop">
         <div class="container-fluid">
             <div class="site-logo px-2"><span class="custom-logo-link"><img alt="logo" id="tci_logo" width="72"
                         height="77" src="img/tci_logo.webp" class="custom-logo" /></span></div>
@@ -330,7 +330,7 @@
                 <div class="mx-0 px-0 tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
                     <script type="text/javascript"
-                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" defer>
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
                             {
                                 "symbols": [
                                     {
@@ -382,7 +382,7 @@
 
         <!-- TradingView Widget END -->
 
-        <div class="px-0 mt-5 pt-3 container" id="Rocket_container">
+        <div class="px-0 mt-5 pt-3 container pagespeed_hide" id="Rocket_container">
 
             <!-- For Laptop View  -->
             <div class="row mt-5 pt-4" id="For_Laptop_View">
@@ -2271,7 +2271,7 @@
             setTimeout(() => {
                 $('.pagespeed_hide').removeClass('d-none')
                 $('.pagespeed_hide').show()
-            }, 500);
+            }, 100);
 
             setTimeout(() => {
                 if (counter_for_vimeo_Laptop_video == 0) {
