@@ -2075,7 +2075,7 @@ div[class*="learnworlds-bg-default"] {
 
 /*** FAQ ***/
 .h-faq-bg {
-  background: url(../img/h-fq-bg.png);
+  background: url(../img/h-fq-bg.webp);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
