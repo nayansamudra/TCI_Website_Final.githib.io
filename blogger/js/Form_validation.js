@@ -279,7 +279,7 @@ $('.btn-close').click(function () {
 
 $(document).ready(function () {
 
-    console.log = function () { };
+    // console.log = function () { };
 
     $('img').attr("oncontextmenu","return false;")
 

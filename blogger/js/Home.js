@@ -21,11 +21,15 @@ $(document).ready(function () {
     $('#heading_Three button').addClass('collapsed')
     $('#heading_Two button').attr('aria-expanded', 'false')
     $('#heading_Three button').attr('aria-expanded', 'false')
-    if ($('#collapse_One').hasClass('in')) {
+    $('#heading_One button').attr('aria-expanded', 'true')
+    if ($('#collapse_One').hasClass('show')) {
       $('#collapse_One').removeClass('show')
+      $('#heading_One button').attr('aria-expanded', 'false')
+      $('#heading_One button').addClass('collapsed')
     }
     else {
       $('#collapse_One').addClass('show')
+      $('#heading_One button').removeClass('collapsed')
     }
   })
   $('#heading_Two').on('click', function () {
@@ -35,11 +39,15 @@ $(document).ready(function () {
     $('#heading_Three button').addClass('collapsed')
     $('#heading_One button').attr('aria-expanded', 'false')
     $('#heading_Three button').attr('aria-expanded', 'false')
-    if ($('#collapse_Two').hasClass('in')) {
+    $('#heading_Two button').attr('aria-expanded', 'true')
+    if ($('#collapse_Two').hasClass('show')) {
       $('#collapse_Two').removeClass('show')
+      $('#heading_Two button').attr('aria-expanded', 'false')
+      $('#heading_Two button').addClass('collapsed')
     }
     else {
       $('#collapse_Two').addClass('show')
+      $('#heading_Two button').removeClass('collapsed')
     }
   })
   $('#heading_Three').on('click', function () {
@@ -49,11 +57,15 @@ $(document).ready(function () {
     $('#heading_One button').addClass('collapsed')
     $('#heading_Two button').attr('aria-expanded', 'false')
     $('#heading_One button').attr('aria-expanded', 'false')
-    if ($('#collapse_Three').hasClass('in')) {
+    $('#heading_Three button').attr('aria-expanded', 'true')
+    if ($('#collapse_Three').hasClass('show')) {
       $('#collapse_Three').removeClass('show')
+      $('#heading_Three button').attr('aria-expanded', 'false')
+      $('#heading_Three button').addClass('collapsed')
     }
     else {
       $('#collapse_Three').addClass('show')
+      $('#heading_Three button').removeClass('collapsed')
     }
   })
 
