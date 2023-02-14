@@ -81,8 +81,7 @@
 
         .laptop_thmbnail {
             position: absolute;
-            width: 73.5% !important;
-            height: 81%;
+            width: 73% !important;
             background: #000;
             top: 7.1%;
             left: 13.5%;
@@ -100,7 +99,6 @@
         .laptop_thmbnail_mobile {
             position: absolute;
             width: 82.2% !important;
-            height: 81.5%;
             background: #000;
             top: 6%;
             left: 8.7%;
@@ -749,7 +747,8 @@
                 <div class="col-md-4 col-12 nopad-mob space">
                     <div class="row my-2">
                         <div class="col-lg-3 col-md-3 col-3">
-                            <img src="./img/Your_Trade_Buddy/Community.webp" alt="Option Greeks" class="w-100 opt-icons">
+                            <img src="./img/Your_Trade_Buddy/Community.webp" alt="Option Greeks"
+                                class="w-100 opt-icons">
                         </div>
                         <div class="col-lg-9 col-md-12 col-9 pl-0 opt-section-right">
                             <div class="row">
@@ -1255,8 +1254,8 @@
                             </div>
                             <div class="inner4 d-flex justify-content-center" style="border-radius:10px;">
                                 <div>
-                                    <img src="img/Rushikesh_Tarlekar.webp" alt="mentor_img" loading="lazy" height="180px"
-                                        width="195px" style="border-radius:20px;">
+                                    <img src="img/Rushikesh_Tarlekar.webp" alt="mentor_img" loading="lazy"
+                                        height="180px" width="195px" style="border-radius:20px;">
                                 </div>
                             </div>
                         </div>
@@ -2074,7 +2073,6 @@
 
     <script>
         jQuery(document).ready(function ($) {
-
             function onVisible(element, callback) {
                 new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
@@ -2207,22 +2205,35 @@
             $("#delayedPopup").fadeOut(300);
         }
 
-        $(window).on('load',function(){
+        $(window).on('load', function () {
             setTimeout(() => {
-                $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-                $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                if (counter_for_vimeo_Laptop_video == 0) {
+                    $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                    counter_for_vimeo_Laptop_video = 1
+                }
+                if (counter_for_vimeo_Laptop_video_MOBILE == 0) {
+                    $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                    counter_for_vimeo_Laptop_video_MOBILE = 1
+                }
                 $('#main_testimonial_iframe_link').attr('src', 'https://player.vimeo.com/video/796213928?h=46b50d283b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
                 $('#iframe_link_1').attr('src', 'https://player.vimeo.com/video/680301651?h=9399ccb92b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
                 $('#iframe_link_2').attr('src', 'https://player.vimeo.com/video/680302796?h=00c0201526&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
                 $('#iframe_link_3').attr('src', 'https://player.vimeo.com/video/680300445?h=517918a4f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-            }, 5000);
+                vimeo_link_set = true
+            }, 3000);
         })
 
         $(document).ready(function () {
 
+            counter_for_vimeo_Laptop_video = counter_for_vimeo_Laptop_video_MOBILE = 0
+            vimeo_link_set = false
+
             $('.laptop_thmbnail').click(() => {
                 $('.laptop_thmbnail').hide()
-                $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                if (counter_for_vimeo_Laptop_video == 0) {
+                    $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                    counter_for_vimeo_Laptop_video = 1
+                }
                 // $('.Laptop_Video_iframe_mobile').attr('src', '')
                 // $('#main_testimonial_iframe_link').attr('src', '')
                 // $('#iframe_link_1').attr('src', '')
@@ -2261,14 +2272,17 @@
                         telegram_counter += 1
                     }, 5000);
                     $('.laptop_thmbnail').show()
-                    $('.Laptop_Video_iframe').attr('src', '')
+                    // $('.Laptop_Video_iframe').attr('src', '')
                     $('.Laptop_Video_iframe').hide()
                 });
             })
 
             $('.laptop_thmbnail_mobile').click(() => {
                 $('.laptop_thmbnail_mobile').hide()
-                // $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                if (counter_for_vimeo_Laptop_video_MOBILE == 0) {
+                    $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                    counter_for_vimeo_Laptop_video_MOBILE = 1
+                }
                 // $('.Laptop_Video_iframe').attr('src', '')
                 // $('#main_testimonial_iframe_link').attr('src', '')
                 // $('#iframe_link_1').attr('src', '')
@@ -2294,7 +2308,7 @@
                         telegram_counter += 1
                     }, 5000);
                     $('.laptop_thmbnail_mobile').show()
-                    $('.Laptop_Video_iframe_mobile').attr('src', '')
+                    // $('.Laptop_Video_iframe_mobile').attr('src', '')
                     $('.Laptop_Video_iframe_mobile').hide()
                 });
             })
@@ -2321,65 +2335,77 @@
                     $("#delayedPopup").show();
                 }
                 telegram_counter += 1
-            }, 5000);
+            }, 7000);
 
             $('#delayedPopup_modal_body').click(() => {
                 window.open('https://telegram.me/tradingcafeindia');
             })
 
-            // $('.btn-know-more').click(() => {
-            //     clearTimeout(myTimeout);
-            //     var iframe = $('#iframe_link_1')[0];
-            //     var player = new Vimeo.Player(iframe);
-            //     player.pause()
+            $('.btn-know-more').click(() => {
+                clearTimeout(myTimeout);
+                if (vimeo_link_set == true) {
+                    var iframe = $('#iframe_link_1')[0];
+                    var player = new Vimeo.Player(iframe);
+                    player.pause()
 
-            //     var iframe_1 = $('#iframe_link_2')[0];
-            //     var player_1 = new Vimeo.Player(iframe_1);
-            //     player_1.pause()
+                    var iframe_1 = $('#iframe_link_2')[0];
+                    var player_1 = new Vimeo.Player(iframe_1);
+                    player_1.pause()
 
-            //     var iframe_2 = $('#iframe_link_3')[0];
-            //     var player_2 = new Vimeo.Player(iframe_2);
-            //     player_2.pause()
+                    var iframe_2 = $('#iframe_link_3')[0];
+                    var player_2 = new Vimeo.Player(iframe_2);
+                    player_2.pause()
 
-            //     var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
-            //     var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
-            //     player_main_testimonial.pause()
+                    var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                    var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                    player_main_testimonial.pause()
+                }
 
-            //     var laptop_vdo = $('.Laptop_Video_iframe')
-            //     var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
-            //     laptop_vdo_player.pause()
+                if (counter_for_vimeo_Laptop_video == 1) {
+                    var laptop_vdo = $('.Laptop_Video_iframe')
+                    var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                    laptop_vdo_player.pause()
+                }
 
-            //     var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
-            //     var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
-            //     laptop_vdo_player_mobile.pause()
-            // })
+                if (counter_for_vimeo_Laptop_video_MOBILE == 1) {
+                    var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                    var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                    laptop_vdo_player_mobile.pause()
+                }
+            })
 
-            // $('#Tredcode_Feature').click(() => {
-            //     clearTimeout(myTimeout);
-            //     var iframe = $('#iframe_link_1')[0];
-            //     var player = new Vimeo.Player(iframe);
-            //     player.pause()
+            $('#Tredcode_Feature').click(() => {
+                clearTimeout(myTimeout);
+                if (vimeo_link_set == true) {
+                    var iframe = $('#iframe_link_1')[0];
+                    var player = new Vimeo.Player(iframe);
+                    player.pause()
 
-            //     var iframe_1 = $('#iframe_link_2')[0];
-            //     var player_1 = new Vimeo.Player(iframe_1);
-            //     player_1.pause()
+                    var iframe_1 = $('#iframe_link_2')[0];
+                    var player_1 = new Vimeo.Player(iframe_1);
+                    player_1.pause()
 
-            //     var iframe_2 = $('#iframe_link_3')[0];
-            //     var player_2 = new Vimeo.Player(iframe_2);
-            //     player_2.pause()
+                    var iframe_2 = $('#iframe_link_3')[0];
+                    var player_2 = new Vimeo.Player(iframe_2);
+                    player_2.pause()
 
-            //     var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
-            //     var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
-            //     player_main_testimonial.pause()
+                    var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
+                    var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
+                    player_main_testimonial.pause()
+                }
 
-            //     var laptop_vdo = $('.Laptop_Video_iframe')
-            //     var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
-            //     laptop_vdo_player.pause()
+                if (counter_for_vimeo_Laptop_video == 1) {
+                    var laptop_vdo = $('.Laptop_Video_iframe')
+                    var laptop_vdo_player = new Vimeo.Player(laptop_vdo);
+                    laptop_vdo_player.pause()
+                }
 
-            //     var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
-            //     var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
-            //     laptop_vdo_player_mobile.pause()
-            // })
+                if (counter_for_vimeo_Laptop_video_MOBILE == 1) {
+                    var laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
+                    var laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
+                    laptop_vdo_player_mobile.pause()
+                }
+            })
 
             $('.Button_Close').click(() => {
                 myTimeout = setTimeout(() => {
@@ -2580,22 +2606,26 @@
     </script>
 
     <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            separateDialCode: true,
-            preferredCountries: ["in"]
-        });
-        input.addEventListener("countrychange", function () {
-            // do something with iti.getSelectedCountryData()
-            console.log("country is changed")
-            if ($('.iti__selected-dial-code').text() == '+86') {
-                console.log("country = CHINA")
-                $('#first_1').attr('maxlength', '11')
-            }
-            else {
-                $('#first_1').attr('maxlength', '10')
-            }
-        });
+        $(window).on('load', function () {
+            setTimeout(() => {
+                var input = document.querySelector("#phone");
+                window.intlTelInput(input, {
+                    separateDialCode: true,
+                    preferredCountries: ["in"]
+                });
+                input.addEventListener("countrychange", function () {
+                    // do something with iti.getSelectedCountryData()
+                    console.log("country is changed")
+                    if ($('.iti__selected-dial-code').text() == '+86') {
+                        console.log("country = CHINA")
+                        $('#first_1').attr('maxlength', '11')
+                    }
+                    else {
+                        $('#first_1').attr('maxlength', '10')
+                    }
+                });
+            }, 1500);
+        })
     </script>
 
     <!-- Course Curriculum (Option 2)-->
