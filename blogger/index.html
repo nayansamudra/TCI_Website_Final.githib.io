@@ -2207,25 +2207,27 @@
             $("#delayedPopup").fadeOut(300);
         }
 
-        // $(window).on('load',function(){
-        //     $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-        //     $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-        //     $('#main_testimonial_iframe_link').attr('src', 'https://player.vimeo.com/video/796213928?h=46b50d283b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-        //     $('#iframe_link_1').attr('src', 'https://player.vimeo.com/video/680301651?h=9399ccb92b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-        //     $('#iframe_link_2').attr('src', 'https://player.vimeo.com/video/680302796?h=00c0201526&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-        //     $('#iframe_link_3').attr('src', 'https://player.vimeo.com/video/680300445?h=517918a4f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-        // })
+        $(window).on('load',function(){
+            setTimeout(() => {
+                $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                $('#main_testimonial_iframe_link').attr('src', 'https://player.vimeo.com/video/796213928?h=46b50d283b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                $('#iframe_link_1').attr('src', 'https://player.vimeo.com/video/680301651?h=9399ccb92b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                $('#iframe_link_2').attr('src', 'https://player.vimeo.com/video/680302796?h=00c0201526&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                $('#iframe_link_3').attr('src', 'https://player.vimeo.com/video/680300445?h=517918a4f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+            }, 5000);
+        })
 
         $(document).ready(function () {
 
             $('.laptop_thmbnail').click(() => {
                 $('.laptop_thmbnail').hide()
                 $('.Laptop_Video_iframe').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-                $('.Laptop_Video_iframe_mobile').attr('src', '')
-                $('#main_testimonial_iframe_link').attr('src', '')
-                $('#iframe_link_1').attr('src', '')
-                $('#iframe_link_2').attr('src', '')
-                $('#iframe_link_3').attr('src', '')
+                // $('.Laptop_Video_iframe_mobile').attr('src', '')
+                // $('#main_testimonial_iframe_link').attr('src', '')
+                // $('#iframe_link_1').attr('src', '')
+                // $('#iframe_link_2').attr('src', '')
+                // $('#iframe_link_3').attr('src', '')
                 $('.Laptop_Video_iframe').show()
                 laptop_vdo = $('.Laptop_Video_iframe')
                 laptop_vdo_player = new Vimeo.Player(laptop_vdo);
@@ -2266,12 +2268,12 @@
 
             $('.laptop_thmbnail_mobile').click(() => {
                 $('.laptop_thmbnail_mobile').hide()
-                $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-                $('.Laptop_Video_iframe').attr('src', '')
-                $('#main_testimonial_iframe_link').attr('src', '')
-                $('#iframe_link_1').attr('src', '')
-                $('#iframe_link_2').attr('src', '')
-                $('#iframe_link_3').attr('src', '')
+                // $('.Laptop_Video_iframe_mobile').attr('src', 'https://player.vimeo.com/video/796194771?h=c42df8671e&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                // $('.Laptop_Video_iframe').attr('src', '')
+                // $('#main_testimonial_iframe_link').attr('src', '')
+                // $('#iframe_link_1').attr('src', '')
+                // $('#iframe_link_2').attr('src', '')
+                // $('#iframe_link_3').attr('src', '')
                 $('.Laptop_Video_iframe_mobile').show()
                 laptop_vdo_mobile = $('.Laptop_Video_iframe_mobile')
                 laptop_vdo_player_mobile = new Vimeo.Player(laptop_vdo_mobile);
@@ -2400,12 +2402,12 @@
                 $('.video-thumbnail-2').show();
                 $('.video-thumbnail-3').show();
 
-                $('#main_testimonial_iframe_link').attr('src', 'https://player.vimeo.com/video/796213928?h=46b50d283b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-                $('.Laptop_Video_iframe').attr('src', '')
-                $('.Laptop_Video_iframe_mobile').attr('src', '')
-                $('#iframe_link_1').attr('src', '')
-                $('#iframe_link_2').attr('src', '')
-                $('#iframe_link_3').attr('src', '')
+                // $('#main_testimonial_iframe_link').attr('src', 'https://player.vimeo.com/video/796213928?h=46b50d283b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                // $('.Laptop_Video_iframe').attr('src', '')
+                // $('.Laptop_Video_iframe_mobile').attr('src', '')
+                // $('#iframe_link_1').attr('src', '')
+                // $('#iframe_link_2').attr('src', '')
+                // $('#iframe_link_3').attr('src', '')
 
                 var main_testimonial_iframe = $('#main_testimonial_iframe_link')[0];
                 var player_main_testimonial = new Vimeo.Player(main_testimonial_iframe);
@@ -2444,12 +2446,12 @@
                 $('.video-thumbnail-3').show();
                 $('.main_testimonial_video-thumbnail').show();
 
-                $('#main_testimonial_iframe_link').attr('src', '')
-                $('.Laptop_Video_iframe').attr('src', '')
-                $('.Laptop_Video_iframe_mobile').attr('src', '')
-                $('#iframe_link_1').attr('src', 'https://player.vimeo.com/video/680301651?h=9399ccb92b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-                $('#iframe_link_2').attr('src', '')
-                $('#iframe_link_3').attr('src', '')
+                // $('#main_testimonial_iframe_link').attr('src', '')
+                // $('.Laptop_Video_iframe').attr('src', '')
+                // $('.Laptop_Video_iframe_mobile').attr('src', '')
+                // $('#iframe_link_1').attr('src', 'https://player.vimeo.com/video/680301651?h=9399ccb92b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                // $('#iframe_link_2').attr('src', '')
+                // $('#iframe_link_3').attr('src', '')
 
                 var iframe = $('#iframe_link_1')[0];
                 var player = new Vimeo.Player(iframe);
@@ -2487,12 +2489,12 @@
                 $('.video-thumbnail-3').show();
                 $('.main_testimonial_video-thumbnail').show();
 
-                $('#main_testimonial_iframe_link').attr('src', '')
-                $('.Laptop_Video_iframe').attr('src', '')
-                $('.Laptop_Video_iframe_mobile').attr('src', '')
-                $('#iframe_link_1').attr('src', '')
-                $('#iframe_link_2').attr('src', 'https://player.vimeo.com/video/680302796?h=00c0201526&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
-                $('#iframe_link_3').attr('src', '')
+                // $('#main_testimonial_iframe_link').attr('src', '')
+                // $('.Laptop_Video_iframe').attr('src', '')
+                // $('.Laptop_Video_iframe_mobile').attr('src', '')
+                // $('#iframe_link_1').attr('src', '')
+                // $('#iframe_link_2').attr('src', 'https://player.vimeo.com/video/680302796?h=00c0201526&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                // $('#iframe_link_3').attr('src', '')
 
                 var iframe_1 = $('#iframe_link_2')[0];
                 var player_1 = new Vimeo.Player(iframe_1);
@@ -2530,12 +2532,12 @@
                 $('.video-thumbnail-2').show();
                 $('.main_testimonial_video-thumbnail').show();
 
-                $('#main_testimonial_iframe_link').attr('src', '')
-                $('.Laptop_Video_iframe').attr('src', '')
-                $('.Laptop_Video_iframe_mobile').attr('src', '')
-                $('#iframe_link_1').attr('src', '')
-                $('#iframe_link_2').attr('src', '')
-                $('#iframe_link_3').attr('src', 'https://player.vimeo.com/video/680300445?h=517918a4f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
+                // $('#main_testimonial_iframe_link').attr('src', '')
+                // $('.Laptop_Video_iframe').attr('src', '')
+                // $('.Laptop_Video_iframe_mobile').attr('src', '')
+                // $('#iframe_link_1').attr('src', '')
+                // $('#iframe_link_2').attr('src', '')
+                // $('#iframe_link_3').attr('src', 'https://player.vimeo.com/video/680300445?h=517918a4f4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')
 
                 var iframe_2 = $('#iframe_link_3')[0];
                 var player_2 = new Vimeo.Player(iframe_2);
