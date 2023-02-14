@@ -14,15 +14,11 @@
         name="description">
 
     <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <title>Trading Cafe India | TCI | Best online stock trading institute</title>
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<!--     <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/Home.css">
     <link rel="icon" href="img/tci_blue.webp" sizes="32x32" />
@@ -89,6 +85,59 @@
             left: 13.5%;
         }
 
+        div.circle_1 {
+            position: absolute;
+            top: 40%;
+            left: 47%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: grid;
+            place-content: center;
+            animation: grow 1s infinite;
+            cursor: pointer;
+        } 
+        
+        div.circle_2 {
+            position: absolute;
+            top: 40%;
+            left: 46.5%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: grid;
+            place-content: center;
+            animation: grow 1s infinite;
+            cursor: pointer;
+        }
+
+        @media (max-width:500px) {
+            div.circle_2 {
+            position: absolute;
+            top: 36%;
+            left: 43%;
+        }
+        }
+
+        div.circle_1>span, div.circle_2>span {
+            color: #324ed4;
+            font-size: 25px;
+            text-align: center;
+            padding-left: 3px !important;
+        }
+
+        @keyframes grow {
+            from {
+                box-shadow: 0px 0px 5px 3px #324ed4;
+            }
+
+            to {
+                box-shadow: 0px 0px 25px 20px #324ed4;
+            }
+        }
+
         .Mobile iframe {
             position: absolute;
             width: 82.2%;
@@ -147,12 +196,6 @@
             }
         }
     </style>
-
-    <!-- Font Awesome -->
-<!--     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> -->
-    <!-- Google Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" /> -->
-<!--     <link href="css/GoogleFonts.css" rel="stylesheet" /> -->
 
 </head>
 
@@ -362,6 +405,11 @@
                     <div class="laptop">
                         <img alt="Laptop_Image" src="./img/laptop_1.webp">
                         <img class="laptop_thmbnail" alt="laptop thmbnail" src="img/Laptop_vdo_img.webp">
+                        <div class="circle_1 laptop_video_button">
+                            <span class="material-icons d-flex align-items-center">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                        </div>
                         <iframe style="display: none;" class="Laptop_Video_iframe" src="" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -383,6 +431,11 @@
                         <div class="Mobile">
                             <img alt="Laptop_Image" src="./img/Laptop_Mobile_View.webp" width="1348px">
                             <img class="laptop_thmbnail_mobile" alt="laptop thmbnail" src="img/Laptop_vdo_img.webp">
+                            <div class="circle_2 laptop_video_button_mobile">
+                                <span class="material-icons d-flex align-items-center">
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
                             <iframe style="display: none;" class="Laptop_Video_iframe_mobile" src=""
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1130,7 +1183,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://m.dailyhunt.in/news/india/english/clout+news-epaper-dhc9d1a4a4c05c48768e5ceb1997c3d6ff/indias+top+stock+market+community+trading+cafe+india+busts+the+myths+about+share+bazaar-newsid-dhc9d1a4a4c05c48768e5ceb1997c3d6ff_4858b6b01c8e11ecb6ffc63dce291935?s=a&amp;ss=pd" target="_blank">
+                                    <a href="https://m.dailyhunt.in/news/india/english/clout+news-epaper-dhc9d1a4a4c05c48768e5ceb1997c3d6ff/indias+top+stock+market+community+trading+cafe+india+busts+the+myths+about+share+bazaar-newsid-dhc9d1a4a4c05c48768e5ceb1997c3d6ff_4858b6b01c8e11ecb6ffc63dce291935?s=a&amp;ss=pd"
+                                        target="_blank">
                                         <img src="img/logo-s2.webp" alt="media_partner_logo" loading="lazy">
                                     </a>
                                 </li>
@@ -2243,6 +2297,10 @@
             counter_for_vimeo_Laptop_video = counter_for_vimeo_Laptop_video_MOBILE = 0
             vimeo_link_set = false
 
+            $('.laptop_video_button').click(()=>{
+                $('.laptop_thmbnail').click()
+            })
+
             $('.laptop_thmbnail').click(() => {
                 $('.laptop_thmbnail').hide()
                 if (counter_for_vimeo_Laptop_video == 0) {
@@ -2284,6 +2342,10 @@
                     $('.laptop_thmbnail').show()
                     $('.Laptop_Video_iframe').hide()
                 });
+            })
+
+            $('.laptop_video_button_mobile').click(()=>{
+                $('.laptop_thmbnail_mobile').click()
             })
 
             $('.laptop_thmbnail_mobile').click(() => {
@@ -2338,7 +2400,7 @@
                     $("#delayedPopup").show();
                 }
                 telegram_counter += 1
-            }, 7000000);
+            }, 7000);
 
             $('#delayedPopup_modal_body').click(() => {
                 window.open('https://telegram.me/tradingcafeindia');
@@ -2602,9 +2664,6 @@
             }, 1500);
         })
     </script>
-            
-<!--     <script src="js/bootstrap3.min.js" defer></script>
-    <script src="js/jquery-1.12.0.min.js" defer></script> -->
 
 </body>
 
