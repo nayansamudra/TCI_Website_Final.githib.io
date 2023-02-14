@@ -1059,7 +1059,7 @@
             </div>
         </div>
 
-        <div class="get_free_guidance_1 d-flex justify-content-center wow animatable fadeInUp pagespeed_hide">
+        <div class="get_free_guidance_1 d-none d-flex justify-content-center wow animatable fadeInUp pagespeed_hide">
             <a href="Success_stories.html">
                 <div class="py-3 px-3" id="more_success_stories"
                     style="font-size: xx-large;font-weight: bolder;color: #324ed4;">
@@ -1165,8 +1165,7 @@
                 <p style="font-size: xx-large;" id="Our_Faculty_Team">Our Faculty Team</p>
             </div>
             <!-- Laptop View  -->
-            <div class="pb-5 pt-2 container animatable fadeInUp" style="height:fit-content"
-                id="Faculty_Team_for_Laptop">
+            <div class="d-none pb-5 pt-2 container animatable fadeInUp pagespeed_hide" style="height:fit-content" id="Faculty_Team_for_Laptop">
                 <div class="mt-5 pt-5 row" style="height:fit-content;">
                     <div class=" col d-flex justify-content-center one_above_other">
                         <div class="text-center" class="inner1"
@@ -1223,7 +1222,7 @@
                 </div>
             </div>
             <!-- Mobile View  -->
-            <div class="container animatable fadeInUp" style="height:fit-content" id="Faculty_Team_for_Mobile">
+            <div class="d-none container animatable fadeInUp pagespeed_hide" style="height:fit-content" id="Faculty_Team_for_Mobile">
                 <div class="mt-5 pt-5 row text-center" style="height:fit-content">
                     <div class="col-6 d-flex justify-content-center">
                         <div class="container-fluid">
@@ -1324,7 +1323,7 @@
         
         <!-- Faculty Team End  -->
 
-        <div class="d-flex justify-content-center pagespeed_hide">
+        <div class="d-none d-flex justify-content-center pagespeed_hide">
             <div class="get_free_guidance_1">
                 <div class="py-3 px-5 get_free_guidance">
                     <a href="javascript:void(0)" id="1_btn" class="btn-know-more" data-bs-toggle="modal" data-src=""
@@ -2211,8 +2210,8 @@
 
         $(window).on('load', function () {
             setTimeout(() => {
+                $('.pagespeed_hide').removeClass('d-none')
                 $('.pagespeed_hide').show()
-                $('#Features_of_Tredcode').removeClass('d-none')
             }, 1500);
 
             setTimeout(() => {
