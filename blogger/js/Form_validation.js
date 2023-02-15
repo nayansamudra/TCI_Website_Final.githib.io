@@ -281,6 +281,8 @@ $(document).ready(function () {
 
     // console.log = function () { };
 
+
+
     $('img').attr("oncontextmenu","return false;")
 
     global_otp_ct = 0
@@ -314,15 +316,33 @@ $(document).ready(function () {
 
     $('#GetFreeCounseling').on('shown.bs.modal', function () {
         $('html').css('overflow', 'hidden');
+        window.location.hash = "modal";
     })
     .on('hidden.bs.modal', function () {
         $('html').attr('style','overflow-x:hidden !important; overflow-y:auto !important')
         $('body').attr('style','overflow-x:hidden !important; overflow-y:auto !important')
     })
 
+    $(window).on('hashchange', function (event) {
+        if(window.location.hash != "#modal") {
+            $('#GetFreeCounseling').modal('hide');
+        }
+    });   
+
+    $(window).on('hashchange', function (event) {
+        if(window.location.hash != "#modal_1") {
+            $('#Tredcode_Modal').modal('hide');
+        }
+    });
+
+    $('.btn-close').click(()=>{
+        window.location.hash = ''
+    })
+
     $('#Tredcode_Modal').on('shown.bs.modal', function () {
         console.log('tredcode_modal is open')
         $('html').css('overflow', 'hidden')
+        window.location.hash = "modal_1";
     })
     .on('hidden.bs.modal', function () {
         console.log('tredcode_modal is close')
